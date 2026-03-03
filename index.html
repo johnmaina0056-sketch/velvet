@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>THE VELVET STAY (Nakuru)</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  <style>
+    * { margin:0; padding:0; box-sizing:border-box; font-family:'Poppins',sans-serif; }
+    body { background:#0f0f0f; color:#fff; }
+    html { scroll-behavior:smooth; }
+
+    nav { position:fixed; width:100%; top:0; left:0; display:flex; justify-content:space-between; align-items:center; padding:20px 10%; background:rgba(0,0,0,0.9); z-index:1000; }
+    nav h2 { color:#d4af37; letter-spacing:2px; }
+    nav ul { list-style:none; display:flex; gap:25px; }
+    nav ul li a { color:#fff; text-decoration:none; font-size:14px; }
+    nav ul li a:hover { color:#d4af37; }
+
+    header { height:100vh; background:url('https://images.unsplash.com/photo-1560448204-e02f11c3d0e2') center/cover no-repeat; display:flex; justify-content:center; align-items:center; text-align:center; padding:20px; }
+    header h1 { font-size:4rem; letter-spacing:3px; }
+    header p { margin:20px 0; font-size:1.2rem; }
+
+    .btn {
+      padding:12px 28px;
+      border-radius:12px;
+      background:#d4af37;
+      color:#000;
+      text-decoration:none;
+      font-weight:600;
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      transition:0.3s;
+      cursor:pointer;
+    }
+    .btn:hover { background:#fff; }
+
+    section { padding:100px 10%; text-align:center; }
+    h2 { margin-bottom:50px; font-size:2.5rem; color:#d4af37; }
+
+    .grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:40px; }
+
+    .card { background:#1a1a1a; border-radius:15px; overflow:hidden; box-shadow:0 10px 30px rgba(0,0,0,0.5); transition:0.4s; padding-bottom:25px; }
+    .card:hover { transform:translateY(-10px); }
+
+    .image-grid { display:grid; grid-template-columns:1fr 1fr; gap:6px; }
+    .image-grid img { width:100%; height:150px; object-fit:cover; cursor:pointer; transition:0.3s; }
+    .image-grid img:hover { opacity:0.8; }
+
+    .card-content { padding:20px; }
+
+    form { max-width:600px; margin:auto; display:flex; flex-direction:column; gap:20px; }
+    input, textarea, select { padding:12px; border:none; border-radius:8px; background:#222; color:#fff; }
+    input:focus, textarea:focus, select:focus { outline:2px solid #d4af37; }
+
+    footer { background:#000; padding:30px; text-align:center; margin-top:50px; }
+    .footer-contact { display:flex; flex-direction:column; gap:10px; justify-content:center; align-items:center; margin-bottom:15px; }
+    .footer-contact p { display:flex; align-items:center; gap:8px; font-size:1rem; }
+
+    .floating-icons {
+      position:fixed;
+      bottom:20px;
+      right:20px;
+      display:flex;
+      flex-direction:column;
+      gap:15px;
+      z-index:2000;
+    }
+    .floating-icons a {
+      display:flex; align-items:center; justify-content:center;
+      width:60px; height:60px;
+      border-radius:12px;
+      color:#fff;
+      font-size:24px;
+      text-decoration:none;
+      box-shadow:0 5px 15px rgba(0,0,0,0.4);
+      transition:0.3s;
+    }
+    .floating-icons a.call { background:#FF5733; }
+    .floating-icons a.whatsapp { background:#25D366; }
+    .floating-icons a:hover { opacity:0.8; }
+
+    .amenities { display:flex; flex-direction:column; gap:10px; margin-top:20px; text-align:left; justify-content:center; align-items:flex-start; }
+    .amenities p { display:flex; align-items:center; gap:10px; font-size:1rem; }
+
+    .lightbox { display:none; position:fixed; z-index:2000; left:0; top:0; width:100%; height:100%; background:rgba(0,0,0,0.95); text-align:center; }
+    .lightbox img { max-width:90%; max-height:85vh; margin-top:5%; border-radius:10px; }
+    .close { position:absolute; top:20px; right:35px; color:#fff; font-size:40px; font-weight:bold; cursor:pointer; }
+
+    @media(max-width:768px){ header h1{ font-size:2.5rem; } .image-grid{ grid-template-columns:1fr; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <h2>THE VELVET STAY (Nakuru)</h2>
+  <ul>
+    <li><a href="#about">About</a></li>
+    <li><a href="#stays">Stays</a></li>
+    <li><a href="#booking">Book</a></li>
+  </ul>
+</nav>
+
+<header>
+  <div>
+    <h1>Luxury Redefined</h1>
+    <p>Premium Short-Term Rentals for Exceptional Living</p>
+    <a href="https://wa.me/0119379443" class="btn" target="_blank"><i class='bx bx-home'></i>Explore Stays</a>
+  </div>
+</header>
+
+<section id="about">
+  <h2>About Us</h2>
+  <p>THE VELVET STAY delivers high-end accommodations from stylish studios to expansive 5-bedroom luxury homes. Designed for comfort, curated for elegance.</p>
+  <div class="amenities">
+    <p><i class='bx bx-check'></i>Fully equipped kitchen</p>
+    <p><i class='bx bx-check'></i>Great customer service</p>
+    <p><i class='bx bx-check'></i>Convenient location</p>
+    <p><i class='bx bx-check'></i>Affordable pricing</p>
+  </div>
+</section>
+
+<section id="booking">
+  <h2>Book Your Stay</h2>
+  <form id="bookingForm">
+    <input type="text" placeholder="Full Name" required>
+    <input type="email" placeholder="Email Address" required>
+    <select required>
+      <option value="">Select Property Type</option>
+      <option>Studio</option>
+      <option>1 Bedroom</option>
+      <option>2 Bedroom</option>
+      <option>3 Bedroom</option>
+      <option>4 Bedroom</option>
+      <option>5 Bedroom</option>
+    </select>
+    <input type="date" required>
+    <textarea rows="4" placeholder="Additional Requests" required></textarea>
+    <button type="submit" class="btn"><i class='bx bx-send'></i>Submit Booking Request</button>
+  </form>
+</section>
+
+<section id="stays">
+  <h2>Our Accommodations</h2>
+  <div class="grid">
+    <script>
+      const properties = [
+        {name:'Studio'},
+        {name:'1 Bedroom'},
+        {name:'2 Bedroom'},
+        {name:'3 Bedroom'},
+        {name:'4 Bedroom'},
+        {name:'5 Bedroom'}
+      ];
+      const images = [
+        'https://images.unsplash.com/photo-1505691938895-1758d7feb511',
+        'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267',
+        'https://images.unsplash.com/photo-1502672260266-1c1ef2d93688',
+        'https://images.unsplash.com/photo-1484154218962-a197022b5858'
+      ];
+      document.write(properties.map(p => `
+        <div class="card">
+          <div class="image-grid">
+            ${images.map(img => `<img src="${img}" onclick="openLightbox(this.src)">`).join('')}
+          </div>
+          <div class="card-content">
+            <h3>${p.name}</h3>
+            <a href="https://wa.me/0119379443" target="_blank" class="btn"><i class='bx bx-calendar'></i>Book Now</a>
+          </div>
+        </div>
+      `).join(''));
+    </script>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-contact">
+    <p><i class='bx bxs-phone'></i> 0119379443</p>
+    <p><i class='bx bxs-envelope'></i> esterndegwa0056@gmail.com</p>
+    <p><i class='bx bxs-map'></i> Nakuru 032</p>
+  </div>
+  <p>© 2026 THE VELVET STAY. All Rights Reserved.</p>
+</footer>
+
+<div class="floating-icons">
+  <a href="tel:0119379443" class="call"><i class='bx bxs-phone'></i></a>
+  <a href="https://wa.me/0119379443" target="_blank" class="whatsapp"><i class='bx bxl-whatsapp'></i></a>
+</div>
+
+<div id="lightbox" class="lightbox" onclick="closeLightbox()">
+  <span class="close">&times;</span>
+  <img id="lightbox-img">
+</div>
+
+<script>
+document.getElementById('bookingForm').addEventListener('submit', function(e){
+  const form = e.target;
+  if(!form.checkValidity()){
+    e.preventDefault();
+    alert('Please fill in all required fields before submitting.');
+  }
+});
+
+function openLightbox(src) {
+  document.getElementById('lightbox').style.display = 'block';
+  document.getElementById('lightbox-img').src = src;
+}
+function closeLightbox() {
+  document.getElementById('lightbox').style.display = 'none';
+}
+</script>
+
+</body>
+</html>
